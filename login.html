@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>后台管理系统</title>
+    <link rel="stylesheet" href="static/css/bootstrap.css">
+    <link rel="stylesheet" href="common/css/common.css">
+    <link rel="stylesheet" href="common/css/login.css">
+</head>
+
+<body>
+    <div class="frontHome page" id="loginbox">
+        <div class="wrap-container">
+            <div id="home_container" class="clearfix">
+                <div id="home_main">
+                    <div class="inner-main">
+                        <div class="login_box">
+                            <div class="form-title">
+                                <h3>后台管理系统</h3>
+                                <h4>LOGIN</h4>
+                            </div>
+                            <div class="logininput">
+                                <form class="updateform">
+                                  <div class="form-group">
+                                    <label>账号</label>
+                                    <input type="text" class="form-control" id="id_username" name="loginname" placeholder="请输入账号">
+                                  </div>
+                                  <div class="form-group">
+                                    <label>密码</label>
+                                    <input type="password" class="form-control" id="id_password" name="loginpsw" placeholder="请输入密码" placeholder="密码">
+                                  </div>
+                                </form>
+                            </div>
+                            <fieldset class="form-actions" style="position:relative; margin-top:15px;">
+                                <div class="loginFormBtn clearfix"> <button class="login_btn js_login_btn" type="button" style="width:100%;">登录</button>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="container" class="mpage">
+        <div id="anitOut" class="anitOut"></div>
+    </div>
+</body>
+<script src="common/js/jquery.min.js"></script>
+<script src="static/validator/js/bootstrapValidator.min.js"></script>
+<script src="common/js/ani.js"></script>
+<script src="common/js/md5.js"></script>
+<script src="common/common.js"></script>
+<script src="common/function/login.js"></script>
+<script src="static/layer/layer.js"></script>
+
+</html>

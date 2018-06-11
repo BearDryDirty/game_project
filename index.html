@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>后台管理系统</title>
+        <link rel="stylesheet" href="static/css/bootstrap.css">
+        <link rel="stylesheet" href="common/css/common.css">
+    </head>
+    <body style="overflow:hidden">
+      <div class="top-navbar">
+          <span class="top-navbar-brand pull-left">后台管理系统 <button type="button" class="btn btn-sm btn-default">清除缓存</button></span>
+          <p class="pull-right">
+            <span>入款 (<i>333</i>)</span>
+            <span>出款 (<i>333</i>)</span>
+            <span>在线 (<i>333</i>)</span>
+            <span>消息 (<i>333</i>)</span>
+            <span class="user"></span>
+            <span onclick="logOut()">登出</span>
+          </p>
+      </div>
+      <div class="nav-group">
+          <div class="first-nav">
+            <a href="page/index/index.html" class="on" target="content" data-nav="1">首页</a>
+            <a href="page/set/basic.html" target="content" data-nav="2">网站设置</a>
+            <a href="page/set/icon.html" target="content" data-nav="3">用户管理</a>
+            <a href="javascript:void(0)" target="content" data-nav="4">现金管理</a>
+            <a href="javascript:void(0)" target="content" data-nav="5">财务管理</a>
+            <a href="javascript:void(0)" target="content" data-nav="6">游戏管理</a>
+            <a href="javascript:void(0)" target="content" data-nav="7">推广管理</a>
+            <a href="javascript:void(0)" target="content" data-nav="8">系统设置</a>
+            <a href="javascript:void(0)" target="content" data-nav="9">活动管理</a>
+            <a href="javascript:void(0)" target="content" data-nav="10">员工管理</a>
+            <a href="javascript:void(0)" target="content" data-nav="11">日志管理</a>
+          </div>
+          <div class="second-nav none" data-nav="2">
+              <a href="page/set/basic.html" target="content">参数设置</a>
+              <a href="page/set/icon.html" target="content">网站图标</a>
+              <a href="javascript:void(0)" target="content">游戏推荐</a>
+              <a href="javascript:void(0)" target="content">首页轮播</a>
+              <a href="javascript:void(0)" target="content">资讯文章</a>
+              <a href="javascript:void(0)" target="content">公司介绍</a>
+          </div>
+          <div class="second-nav none" data-nav="3">
+              <a href="javascript:void(0)" target="content">用户列表</a>
+              <a href="javascript:void(0)" target="content">会员层级</a>
+              <a href="javascript:void(0)" target="content">银行卡管理</a>
+          </div>
+          <div class="second-nav none" data-nav="4">
+              <a href="javascript:void(0)" target="content">线上入款</a>
+              <a href="javascript:void(0)" target="content">公司入款</a>
+              <a href="javascript:void(0)" target="content">人工入款</a>
+              <a href="javascript:void(0)" target="content">出款审核</a>
+              <a href="javascript:void(0)" target="content">流水稽查</a>
+              <a href="javascript:void(0)" target="content">支付平台管理</a>
+              <a href="javascript:void(0)" target="content">公司账号管理</a>
+          </div>
+          <div class="second-nav none" data-nav="5">
+              <a href="javascript:void(0)" target="content">整合报表</a>
+              <a href="javascript:void(0)" target="content">财务报表</a>
+              <a href="javascript:void(0)" target="content">统计概况</a>
+              <a href="javascript:void(0)" target="content">帐变报表</a>
+              <a href="javascript:void(0)" target="content">代理报表</a>
+          </div>
+          <div class="second-nav none" data-nav="6">
+              <a href="javascript:void(0)" target="content">游戏列表</a>
+              <a href="javascript:void(0)" target="content">游戏排序</a>
+              <a href="javascript:void(0)" target="content">注单管理</a>
+              <a href="javascript:void(0)" target="content">彩票追单</a>
+              <a href="javascript:void(0)" target="content">开奖记录</a>
+              <a href="javascript:void(0)" target="content">游戏风控</a>
+          </div>
+          <div class="second-nav none" data-nav="7">
+              <a href="javascript:void(0)" target="content">推广管理</a>
+          </div>
+          <div class="second-nav none" data-nav="8">
+              <a href="javascript:void(0)" target="content">域名绑定</a>
+              <a href="javascript:void(0)" target="content">后台白名单</a>
+          </div>
+          <div class="second-nav none" data-nav="9">
+              <a href="javascript:void(0)" target="content">活动管理</a>
+          </div>
+          <div class="second-nav none" data-nav="10">
+              <a href="javascript:void(0)" target="content">员工列表</a>
+              <a href="javascript:void(0)" target="content">个人资料</a>
+          </div>
+          <div class="second-nav none" data-nav="11">
+              <a href="javascript:void(0)" target="content">用户信息</a>
+              <a href="javascript:void(0)" target="content">管理员日志</a>
+          </div>
+      </div>
+      <iframe id="iframe" src="page/index/index.html" frameborder="0" width="100%" name="content"></iframe>
+    </body>
+    <script src="common/js/jquery.min.js"></script>
+    <script src="common/function/index.js"></script>
+</html>
