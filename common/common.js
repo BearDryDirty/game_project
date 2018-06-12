@@ -16,28 +16,24 @@ function layer_false(res){
         layer.closeAll();
     })
 }
-//通用ajax
+//通用form提交
 function BasePost(postData,postApi){
-    console.log(postData);
-    console.log(postApi);
-    $.ajax({
-        url:postApi,
-        type: 'post',
-        dataType: 'json',
-        data:$(".post-form").serialize(),
-        success:function(res){
-            console.log(res);
-            if(res.res_msg.res_code == "0000"){
-                getData()
-            }else{
-                layer_false(res);
-            }
-        },
-        error:function(res){
-            layer_false(res)
-        }
-    })
+    $('.post-form').ajaxForm({
+      url:postApi,
+      type:'post',
+      success:function(res){
+          console.log(res);
+        layer_success(res);
+        getData()
+      },
+      error:function(res){
+        layer_false(res)
+      }
+    });
+    return false;
 }
+
+
 
 //时间
 $(function () {

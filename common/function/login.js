@@ -21,7 +21,6 @@ function post(postApi,postData){
         data:postData,
         success:function(res){
             if(res.res_msg.res_code == "0000"){
-                console.log(res);
                 var data = JSON.stringify(res)
                 sessionStorage.setItem("data",data);
                 sessionStorage.setItem("sessionID",res.sessionID);

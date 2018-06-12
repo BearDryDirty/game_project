@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href="../../static/css/bootstrap.css">
+        <link rel="stylesheet" href="../../common/css/common.css">
+        <!--时间插件-->
+        <link rel="stylesheet"href="../../static/timepicker/jquery-ui-1.8.17.custom.css" />
+        <link rel="stylesheet" href="../../static/timepicker/jquery-ui-timepicker-addon.css" />
+    </head>
+    <body>
+        <div class="container">
+            <form class="post-form">
+                <button class="btn btn-info page-btn" onclick="postData()">提交</button>
+            <div class="row">
+              <div class="col-md-12">
+                  <table class="table table-bordered">
+                    <tbody>
+                        <tr id="webLogoUrl">
+                            <td>Logo</td>
+                            <td><img src="" alt="" height="40px"></td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-info">上传</button>
+                                <input type="file" name="webLogoUrl" class="none">
+                                <button type="button" class="btn btn-sm btn-danger">删除图片</button>
+                            </td>
+                        </tr id="webIconUrl">
+                        <tr>
+                            <td>icon</td>
+                            <td><img src="" alt="" height="40px"></td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-info">上传</button>
+                                <input type="file" name="webIconUrl" class="none">
+                                <button type="button" class="btn btn-sm btn-danger">删除图片</button>
+                            </td>
+                        </tr>
+                        <tr id="webSloganUrl">
+                            <td>slogan</td>
+                            <td><img src="" alt="" height="40px"></td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-info">上传</button>
+                                <input type="file" name="webSloganUrl" class="none">
+                                <button type="button" class="btn btn-sm btn-danger">删除图片</button>
+                            </td>
+                        </tr>
+                        <input type="hidden" id="sessionID" name="sessionID">
+                        <input type="hidden" id="sid" name="sid">
+                        </tr>
+                    </tbody>
+                  </table>
+              </div>
+          </div>
+      </form>
+      </div>
+    </body>
+    <script src="../../common/js/jquery.min.js"></script>
+    <script src="../../static/js/bootstrap.min.js"></script>
+    <script src="../../common/common.js"></script>
+    <script src="../../common/function/icon.js"></script>
+    <script src="../../static/layer/layer.js"></script>
+    <script src="../../common/js/jquery.form.js"></script>
+    <script src="../../static/validator/js/bootstrapValidator.min.js"></script>
+    <script src="../../static/timepicker/jquery-ui-1.9.2.custom.min.js"></script>
+    <script src="../../static/timepicker/jquery-ui-timepicker-addon.js"></script>
+    <script src="../../static/timepicker/jquery-ui-timepicker-zh-CN.js"></script>
+</html>

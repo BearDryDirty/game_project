@@ -3,11 +3,9 @@ var modifyApi = BackStage + "config/modifyWebConfig.do";  //修改网站配置
 
 $(function(){
     getData();
-
-        $("#sessionID").val(sessionID)
+    $("#sessionID").val(sessionID)
 })
 var sid="";
-var resBody="";
 //获取数据
 function getData(){
     $.ajax({
@@ -18,7 +16,6 @@ function getData(){
         success:function(res){
             if(res.res_msg.res_code == "0000"){
                 var dataBody = res.body;
-                resBody = dataBody;
                 sid = dataBody.sid;
                 for (i in dataBody){
                     var getId = i;
@@ -48,22 +45,21 @@ function getData(){
 //发送数据
 function postData(){
     var postData="";
-    $("td").each(function(){
-        var id = $(this).attr("id");
-        if(typeof(id) != "undefined"){
-            var type = $("#" + id).find("input[type=radio]:checked").data("type");
-            postData += '"'+id+'":'+type+',';
-        }
-    })
-    $("input[type=text]").each(function(){
-        var id = $(this).attr("id");
-        if(typeof(id) != "undefined"){
-            var val = $("#" + id).val();
-            postData += '"'+id+'":'+val+',';
-        }
-    })
-    postData+= '"sid":'+sid+',"sessionID":'+sessionID;
- postData="{"+postData+"}"
-    // postData = JSON.parse(postData);
+    // $("td").each(function(){
+    //     var id = $(this).attr("id");
+    //     if(typeof(id) != "undefined"){
+    //         var type = $("#" + id).find("input[type=radio]:checked").data("type");
+    //         postData += '"'+id+'":'+type+',';
+    //     }
+    // })
+    // $("input[type=text]").each(function(){
+    //     var id = $(this).attr("id");
+    //     if(typeof(id) != "undefined"){
+    //         var val = $("#" + id).val();
+    //         postData += '"'+id+'":'+val+',';
+    //     }
+    // })
+    // postData+= '"sid":'+sid+',"sessionID":'+sessionID;
+    // postData="{"+postData+"}"
     BasePost(postData,modifyApi)
 }
