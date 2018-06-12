@@ -2,6 +2,8 @@ i{font-style: normal;}
 a:hover{text-decoration: none}
 html,body{height: 100%}
 .none{display: none !important}
+.table thead{background: #f5f5f5}
+.table button{margin: 0 2px}
 .has-feedback label ~ .form-control-feedback{top: 18px}
 .container{width: 90%; padding: 0;}
 .top-navbar{background: #4A5064; margin: 0; padding:0 5%; width: 100%; height: 40px}
@@ -22,3 +24,4 @@ td{vertical-align: middle !important;}
 .form-control{height: 26px}
 .page-btn{margin-bottom: 20px}
 .post-form{margin-top: 20px}
+.mb20{margin-bottom: 20px}

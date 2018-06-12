@@ -33,6 +33,26 @@ function BasePost(postData,postApi){
     return false;
 }
 
+//通用获取数据
+function AjaxPost(postApi,postData,page,rows){
+    $.ajax({
+        url:postApi,
+        type:'post',
+        dataType: 'json',
+        data:postData,
+        success:function(res){
+            if(res.res_msg.res_code == "0000"){
+                console.log(res);
+                setDom(res)
+            }else{
+                layer_false(res);
+            }
+        },
+        error:function(res){
+            layer_false(res)
+        }
+    })
+}
 
 
 //时间
@@ -89,6 +109,12 @@ $(document).ready(function () {
                          regexp: "^([0-9]{11})?$",
                          message: '手机号码格式错误'
                      }
+                 }
+             }, imgTitle: {
+                 validators: {
+                     notEmpty: {
+                         message: '该项不能为空'
+                     },
                  }
              }
          }

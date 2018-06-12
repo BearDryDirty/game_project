@@ -17,7 +17,6 @@ function getData(){
         success:function(res){
             if(res.res_msg.res_code == "0000"){
                 var dataBody = res.body;
-                console.log(dataBody);
                 sid = dataBody.sid;
                 for (i in dataBody){
                     var getId = i;
