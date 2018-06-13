@@ -1,5 +1,6 @@
 var postApi = BackStage + "config/loadTurnImgList.do";  //获取网站轮播图列表
 var modifyTApi = BackStage + "config/modifyTurnImg.do"; //修改网站轮播图
+var addApi = BackStage + "config/addTurnImg.do"; //添加网站轮播图列表
 $(function(){
     $("#sessionID").val(sessionID);
     var postData = {"sessionID":sessionID}
@@ -76,4 +77,31 @@ function sort(obj){
             }
         })
     }
+}
+
+function selType(obj){
+    var type = $(obj).find("input").data("type");
+    if(type == "1"){
+        $(".wen").removeClass("none");
+        $(".link").addClass("none");
+        $(".wen input").prop("name","turnUrl");
+        $(".link input").prop("name","")
+    }else{
+        $(".link").removeClass("none");
+        $(".wen").addClass("none");
+        $(".wen input").prop("name","");
+        $(".link input").prop("name","turnUrl")
+    }
+}
+
+//添加
+function add(){
+    var postData="";
+    var page = "";
+    var rows = "";
+    var imgSort = $("#tb tr").length;
+    var imgStatus = $();
+    var postData ={"sessionID":sessionID,"imgSort":imgSort,"imgStatus":0,"imgTitle":"pic","imgUrl":"http://bb.youzigame.com/image/1804151604211883.jpg","turnUrl":"999","turnType":1}
+    $("#imgSort").val(imgSort + 1);
+    AjaxPost(addApi,postData,page,rows)
 }

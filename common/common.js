@@ -16,8 +16,46 @@ function layer_false(res){
         layer.closeAll();
     })
 }
+
+function page1(pageNum){
+	$('.M-box1').pagination({
+		pageCount: pageNum,
+		jump: true,
+		coping: true,
+		homePage: '1',
+		endPage: pageNum,
+		jumps:'jumpPage(this)',
+		changes:'changePage(this)'
+	});
+}
+
+function page2(pageNum){
+	$('.M-box2').pagination({
+		pageCount: pageNum,
+		jump: true,
+		coping: true,
+		homePage: '1',
+		endPage: pageNum,
+		jumps:'jumpPage1(this)',
+		changes:'changePage1(this)'
+	});
+}
+
+function page3(pageNum){
+	$('.M-box3').pagination({
+		pageCount: pageNum,
+		jump: true,
+		coping: true,
+		homePage: '1',
+		endPage: pageNum,
+		jumps:'jumpPage2(this)',
+		changes:'changePage2(this)'
+	});
+}
+
 //通用form提交
 function BasePost(postData,postApi){
+    console.log(postApi);
     $('.post-form').ajaxForm({
       url:postApi,
       type:'post',
@@ -41,6 +79,7 @@ function AjaxPost(postApi,postData,page,rows){
         dataType: 'json',
         data:postData,
         success:function(res){
+            console.log(res);
             if(res.res_msg.res_code == "0000"){
                 console.log(res);
                 setDom(res)
@@ -49,6 +88,7 @@ function AjaxPost(postApi,postData,page,rows){
             }
         },
         error:function(res){
+            console.log(res);
             layer_false(res)
         }
     })

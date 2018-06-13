@@ -48,12 +48,11 @@
           </div>
           <input type="hidden" id="sessionID" name="sessionID">
           <input type="hidden" id="sid" name="sid">
-      </form>
+
       </div>
 
       <!-- Modal -->
       <div class="modal fade" id="modal-add" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-         <form class="updateform">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
@@ -71,37 +70,37 @@
                     <div class="form-group">
                       <label for="inputPassword3" class="col-sm-2 control-label">图片</label>
                       <div class="col-sm-10">
-                        <input type="file" name="imgTitle">
+                        <input type="text" class="form-control" name="imgUrl">
                       </div>
                     </div>
                     <div class="form-group">
                       <label for="inputPassword3" class="col-sm-2 control-label">链接</label>
                       <div class="col-sm-10">
-                          <label class="radio-inline">
-                            <input type="radio" name="turnUrl" data-type="1" value="1"> 文章
+                          <label class="radio-inline" onclick="selType(this)">
+                            <input type="radio" name="turnType" data-type="1" value="1" checked> 文章
                           </label>
-                          <label class="radio-inline">
-                            <input type="radio" name="turnUrl" data-type="0" value="2"> 链接
+                          <label class="radio-inline" onclick="selType(this)">
+                            <input type="radio" name="turnType" data-type="0" value="2"> 链接
                           </label>
                       </div>
                     </div>
-                    <div class="form-group">
-                      <label for="inputPassword3" class="col-sm-2 control-label">文章</label>
+                    <div class="form-group wen">
+                      <label for="inputPassword3" class="col-sm-2 control-label"></label>
                       <div class="col-sm-10">
-                        <input type="text" class="form-control" name="imgTitle">
+                        <input type="text" class="form-control" name="turnUrl" readonly onclick="selWen()" placeholder="请选择文章">
                       </div>
                     </div>
-                    <div class="form-group">
-                      <label for="inputPassword3" class="col-sm-2 control-label">链接</label>
+                    <div class="form-group link none">
+                      <label for="inputPassword3" class="col-sm-2 control-label"></label>
                       <div class="col-sm-10">
-                        <input type="text" class="form-control" name="imgTitle">
+                        <input type="text" class="form-control" name="" placeholder="请输入链接">
                       </div>
                     </div>
                     <div class="form-group">
                       <label for="inputPassword3" class="col-sm-2 control-label">状态</label>
                       <div class="col-sm-10">
                           <label class="radio-inline">
-                            <input type="radio" name="imgStatus" data-type="1" value="1"> 显示
+                            <input type="radio" name="imgStatus" data-type="1" value="1" checked> 显示
                           </label>
                           <label class="radio-inline">
                             <input type="radio" name="imgStatus" data-type="0" value="0"> 隐藏
@@ -111,13 +110,13 @@
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                  <button type="button" class="btn btn-primary">确定</button>
+                  <button type="button" class="btn btn-primary" onclick="add()">确定</button>
                 </div>
               </div>
             </div>
-        </form>
       </div>
 
+      </form>
     </body>
     <script src="../../common/js/jquery.min.js"></script>
     <script src="../../static/js/bootstrap.min.js"></script>
@@ -125,6 +124,7 @@
     <script src="../../common/common.js"></script>
     <script src="../../common/function/slide.js"></script>
     <script src="../../static/layer/layer.js"></script>
+    <script src="../../common/js/jquery.pagination.js"></script>
     <script src="../../common/js/jquery.form.js"></script>
     <script src="../../static/timepicker/jquery-ui-1.9.2.custom.min.js"></script>
     <script src="../../static/timepicker/jquery-ui-timepicker-addon.js"></script>
